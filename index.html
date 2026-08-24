@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8 Meter Mafia | Girls & Womens Lacrosse Lifestyle Brand</title>
+  <meta name="description" content="8 Meter Mafia is the premier lifestyle brand for girls and women who live lacrosse. Own the arc. Represent the Mafia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    🏒 FREE SHIPPING on orders $75+ &nbsp;|&nbsp; Use code <strong>MAFIA15</strong> for 15% off your first order &nbsp;|&nbsp; <a href="shop.html">Shop Now →</a>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-inner">
+
+        <!-- Logo -->
+        <div class="nav-logo">
+          <a href="index.html">
+            8<span> Meter</span> Mafia
+            <span class="logo-badge">Women's Lax</span>
+          </a>
+        </div>
+
+        <!-- Desktop Nav Links -->
+        <ul class="nav-links">
+          <li>
+            <a href="shop.html" class="active">Shop</a>
+            <div class="dropdown">
+              <a href="shop.html#tops">Tops &amp; Tanks</a>
+              <a href="shop.html#bottoms">Shorts &amp; Joggers</a>
+              <a href="shop.html#hoodies">Hoodies &amp; Crews</a>
+              <a href="shop.html#hats">Headwear</a>
+              <a href="shop.html#accessories">Accessories</a>
+              <a href="shop.html#gear">Gear Bags</a>
+            </div>
+          </li>
+          <li>
+            <a href="shop.html#collections">Collections</a>
+            <div class="dropdown">
+              <a href="shop.html#new">New Arrivals</a>
+              <a href="shop.html#gameday">Game Day</a>
+              <a href="shop.html#practice">Practice Ready</a>
+              <a href="shop.html#campus">Campus Life</a>
+              <a href="shop.html#sale">Sale</a>
+            </div>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#community">Community</a></li>
+        </ul>
+
+        <!-- Nav Actions -->
+        <div class="nav-actions">
+          <button aria-label="Search">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+          <a href="#" aria-label="Account">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </a>
+          <button data-cart-open aria-label="Cart">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span class="cart-count">0</span>
+          </button>
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
+    <div class="mobile-nav-drawer">
+      <div class="mobile-nav-header">
+        <a href="index.html" style="font-family:'Oswald',sans-serif;font-size:1.2rem;color:#fff;letter-spacing:.06em;text-transform:uppercase;">8 Meter Mafia</a>
+        <button class="mobile-nav-close" id="mobileClose">✕</button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="shop.html">Shop All</a>
+        <a href="shop.html#tops">Tops &amp; Tanks</a>
+        <a href="shop.html#bottoms">Shorts &amp; Joggers</a>
+        <a href="shop.html#hoodies">Hoodies &amp; Crews</a>
+        <a href="shop.html#hats">Headwear</a>
+        <a href="shop.html#accessories">Accessories</a>
+        <a href="shop.html#new">New Arrivals</a>
+        <a href="shop.html#sale">Sale</a>
+        <a href="about.html">About Us</a>
+        <a href="about.html#community">Community</a>
+      </nav>
+      <div style="margin-top:32px;">
+        <a href="shop.html" class="btn btn-primary" style="width:100%;text-align:center;display:block;">Shop Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CART DRAWER -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-backdrop" id="cartBackdrop"></div>
+    <div class="cart-panel">
+      <div class="cart-header">
+        <h3>Your Cart (0)</h3>
+        <button class="cart-close" id="cartClose">✕</button>
+      </div>
+      <div class="cart-body">
+        <div class="cart-empty">
+          <div class="cart-empty-icon">🥍</div>
+          <p>Your cart is empty.<br>Time to gear up!</p>
+          <a href="shop.html" class="btn btn-primary">Shop Now</a>
+        </div>
+      </div>
+      <div class="cart-footer">
+        <div style="display:flex;justify-content:space-between;font-weight:700;margin-bottom:16px;font-size:1.1rem;">
+          <span>Subtotal</span><span>$0.00</span>
+        </div>
+        <a href="shop.html" class="btn btn-dark">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-arc"></div>
+    <div class="hero-glow"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-eyebrow">New Arrivals — Fall Collection 2025</span>
+        <h1 class="hero-title">
+          Own <span class="accent">The</span><br>
+          <span class="gold">Arc.</span> Rule<br>
+          The Game.
+        </h1>
+        <p class="hero-subtitle">Lifestyle apparel built for the girls who live on the 8-meter. Bold enough for the field, fresh enough for everywhere else.</p>
+        <div class="hero-actions">
+          <a href="shop.html#new" class="btn btn-primary">Shop New Arrivals</a>
+          <a href="about.html" class="btn btn-outline">Our Story</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><span class="stat-num">10K+</span><span class="stat-label">Mafia Members</span></div>
+      <div class="stat-item"><span class="stat-num">4.9★</span><span class="stat-label">Avg. Rating</span></div>
+      <div class="stat-item"><span class="stat-num">500+</span><span class="stat-label">Products</span></div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-inner">
+      <span class="ticker-item">Free Shipping $75+</span>
+      <span class="ticker-item">Own the Arc</span>
+      <span class="ticker-item">8 Meter Mafia</span>
+      <span class="ticker-item">New Arrivals Weekly</span>
+      <span class="ticker-item">Rep Your Mafia</span>
+      <span class="ticker-item">Game Day Ready</span>
+      <span class="ticker-item">Free Returns</span>
+      <span class="ticker-item">Girls Lacrosse Lifestyle</span>
+      <!-- Duplicated for seamless scroll -->
+      <span class="ticker-item">Free Shipping $75+</span>
+      <span class="ticker-item">Own the Arc</span>
+      <span class="ticker-item">8 Meter Mafia</span>
+      <span class="ticker-item">New Arrivals Weekly</span>
+      <span class="ticker-item">Rep Your Mafia</span>
+      <span class="ticker-item">Game Day Ready</span>
+      <span class="ticker-item">Free Returns</span>
+      <span class="ticker-item">Girls Lacrosse Lifestyle</span>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="categories" id="shop">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Browse the Mafia</span>
+        <h2 class="section-title">Shop by Category</h2>
+      </div>
+      <div class="cat-grid">
+
+        <div class="cat-card">
+          <div class="cat-ph cat-ph-1" style="aspect-ratio:3/4;">🏒</div>
+          <div class="cat-overlay"></div>
+          <div class="cat-info">
+            <span class="cat-label">Game Day Tops</span>
+            <a href="shop.html#tops" class="cat-link">Shop Now →</a>
+          </div>
+        </div>
+
+        <div class="cat-card">
+          <div class="cat-ph cat-ph-2" style="aspect-ratio:3/4;">🌸</div>
+          <div class="cat-overlay"></div>
+          <div class="cat-info">
+            <span class="cat-label">Hoodies &amp; Crews</span>
+            <a href="shop.html#hoodies" class="cat-link">Shop Now →</a>
+          </div>
+        </div>
+
+        <div class="cat-card">
+          <div class="cat-ph cat-ph-3" style="aspect-ratio:3/4;">⚡</div>
+          <div class="cat-overlay"></div>
+          <div class="cat-info">
+            <span class="cat-label">Shorts &amp; Joggers</span>
+            <a href="shop.html#bottoms" class="cat-link">Shop Now →</a>
+          </div>
+        </div>
+
+        <div class="cat-card">
+          <div class="cat-ph cat-ph-4" style="aspect-ratio:3/4;">🎽</div>
+          <div class="cat-overlay"></div>
+          <div class="cat-info">
+            <span class="cat-label">Accessories</span>
+            <a href="shop.html#accessories" class="cat-link">Shop Now →</a>
+          </div>
+        </div>
+
+        <div class="cat-card" style="grid-column: span 2;">
+          <div class="cat-ph cat-ph-5" style="aspect-ratio:2/1;min-height:200px;">🏆</div>
+          <div class="cat-overlay"></div>
+          <div class="cat-info">
+            <span class="cat-label">New Arrivals — Fall '25</span>
+            <a href="shop.html#new" class="cat-link">See What's New →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="featured-products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Fan Favorites</span>
+        <h2 class="section-title">Bestsellers</h2>
+        <p class="section-sub">The pieces every Mafia member needs in their rotation.</p>
+      </div>
+      <div class="products-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <div class="product-ph" style="background:linear-gradient(135deg,#4c1d95,#6d28d9)">👕</div>
+            <span class="badge badge-hot">Bestseller</span>
+            <div class="product-quick">Quick Add</div>
+          </div>
+          <div class="product-info">
+            <p class="product-name">8M Classic Tee</p>
+            <p class="product-type">Women's Lifestyle Top</p>
+            <div class="product-footer">
+              <span class="product-price">$34</span>
+              <div class="color-dots">
+                <div class="dot" style="background:#6d28d9;" title="Purple"></div>
+                <div class="dot" style="background:#0f0f1a;" title="Black"></div>
+                <div class="dot" style="background:#ec4899;" title="Pink"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <div class="product-ph" style="background:linear-gradient(135deg,#831843,#ec4899)">🧥</div>
+            <span class="badge badge-new">New</span>
+            <div class="product-quick">Quick Add</div>
+          </div>
+          <div class="product-info">
+            <p class="product-name">Mafia Pullover Hoodie</p>
+            <p class="product-type">Fleece Hoodie</p>
+            <div class="product-footer">
+              <span class="product-price">$68</span>
+              <div class="color-dots">
+                <div class="dot" style="background:#1e1b4b;" title="Navy"></div>
+                <div class="dot" style="background:#831843;" title="Crimson"></div>
+                <div class="dot" style="background:#334155;" title="Slate"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <div class="product-ph" style="background:linear-gradient(135deg,#0f0f1a,#6d28d9)">🩳</div>
+            <span class="badge badge-hot">Bestseller</span>
+            <div class="product-quick">Quick Add</div>
+          </div>
+          <div class="product-info">
+            <p class="product-name">Arc Biker Shorts</p>
+            <p class="product-type">Women's Shorts</p>
+            <div class="product-footer">
+              <span class="product-price">$42</span>
+              <div class="color-dots">
+                <div class="dot" style="background:#0f0f1a;" title="Black"></div>
+                <div class="dot" style="background:#6d28d9;" title="Purple"></div>
+                <div class="dot" style="background:#ec4899;" title="Pink"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <div class="product-ph" style="background:linear-gradient(135deg,#1e1b4b,#4c1d95)">🧢</div>
+            <span class="badge badge-new">New</span>
+            <div class="product-quick">Quick Add</div>
+          </div>
+          <div class="product-info">
+            <p class="product-name">8M Dad Hat</p>
+            <p class="product-type">Unstructured Cap</p>
+            <div class="product-footer">
+              <span class="product-price">$30</span>
+              <div class="color-dots">
+                <div class="dot" style="background:#0f0f1a;" title="Black"></div>
+                <div class="dot" style="background:#1e3a5f;" title="Navy"></div>
+                <div class="dot" style="background:#78350f;" title="Brown"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <div class="product-ph" style="background:linear-gradient(135deg,#0c4a6e,#0369a1)">👟</div>
+            <div class="product-quick">Quick Add</div>
+          </div>
+          <div class="product-info">
+            <p class="product-name">Mafia Crewneck</p>
+            <p class="product-type">Heavyweight Crew</p>
+            <div class="product-footer">
+              <span class="product-price">$58</span>
+              <div class="color-dots">
+                <div class="dot" style="background:#6d28d9;" title="Purple"></div>
+                <div class="dot" style="background:#0f0f1a;" title="Black"></div>
+                <div class="dot" style="background:#7f1d1d;" title="Red"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <div class="product-ph" style="background:linear-gradient(135deg,#78350f,#d97706)">🎽</div>
+            <span class="badge badge-sale">Sale</span>
+            <div class="product-quick">Quick Add</div>
+          </div>
+          <div class="product-info">
+            <p class="product-name">Game Day Tank</p>
+            <p class="product-type">Performance Tank</p>
+            <div class="product-footer">
+              <span class="product-price"><span class="price-old">$36</span>$24</span>
+              <div class="color-dots">
+                <div class="dot" style="background:#ec4899;" title="Pink"></div>
+                <div class="dot" style="background:#f59e0b;" title="Gold"></div>
+                <div class="dot" style="background:#0f0f1a;" title="Black"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <div class="product-ph" style="background:linear-gradient(135deg,#14532d,#16a34a)">🎒</div>
+            <span class="badge badge-new">New</span>
+            <div class="product-quick">Quick Add</div>
+          </div>
+          <div class="product-info">
+            <p class="product-name">Stick Bag Backpack</p>
+            <p class="product-type">Lacrosse Gear Bag</p>
+            <div class="product-footer">
+              <span class="product-price">$85</span>
+              <div class="color-dots">
+                <div class="dot" style="background:#0f0f1a;" title="Black"></div>
+                <div class="dot" style="background:#6d28d9;" title="Purple"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <div class="product-ph" style="background:linear-gradient(135deg,#4c1d95,#ec4899)">🧦</div>
+            <span class="badge badge-hot">Fan Fave</span>
+            <div class="product-quick">Quick Add</div>
+          </div>
+          <div class="product-info">
+            <p class="product-name">8M Crew Socks</p>
+            <p class="product-type">3-Pack</p>
+            <div class="product-footer">
+              <span class="product-price">$22</span>
+              <div class="color-dots">
+                <div class="dot" style="background:#ec4899;" title="Pink"></div>
+                <div class="dot" style="background:#6d28d9;" title="Purple"></div>
+                <div class="dot" style="background:#0f0f1a;" title="Black"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="section-cta">
+        <a href="shop.html" class="btn btn-dark">View All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND STORY -->
+  <section class="brand-story" id="about">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-visual">
+          <div class="story-img-main">
+            <div class="story-ph-main">🏒</div>
+          </div>
+          <div class="story-img-accent">
+            <div class="story-ph-accent">✨</div>
+          </div>
+        </div>
+        <div class="story-content">
+          <span class="story-eyebrow">Our Story</span>
+          <h2 class="story-title">
+            Built by Players.<br>
+            For <span class="accent">Players.</span>
+          </h2>
+          <p class="story-text">8 Meter Mafia was born on the field — from the players who know the pressure of stepping into that arc and delivering. We built a brand that celebrates the grit, the grind, and the sisterhood that makes girls lacrosse unlike anything else.</p>
+          <p class="story-text">Every stitch, every design, every drop is made for the girl who eats, sleeps, and breathes lacrosse. Whether you're a D1 commit or a weekend warrior, you're Mafia.</p>
+          <div class="story-pillars">
+            <div class="pillar">
+              <div class="pillar-icon">🏆</div>
+              <div class="pillar-label">Compete</div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">🤝</div>
+              <div class="pillar-label">Sisterhood</div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">🔥</div>
+              <div class="pillar-label">Grind</div>
+            </div>
+          </div>
+          <a href="about.html" class="btn btn-primary">Read Our Story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">The Mafia Speaks</span>
+        <h2 class="section-title">What Players Are Saying</h2>
+      </div>
+
+      <div class="reviews-aggregate">
+        <div style="text-align:center;">
+          <div class="agg-num">4.9</div>
+          <div class="agg-stars">★★★★★</div>
+          <div class="agg-label">Average Rating</div>
+        </div>
+        <div class="agg-divider"></div>
+        <div style="text-align:center;">
+          <div class="agg-num">2,400+</div>
+          <div class="agg-label">Verified Reviews</div>
+        </div>
+        <div class="agg-divider"></div>
+        <div style="text-align:center;">
+          <div class="agg-num">98%</div>
+          <div class="agg-label">Would Recommend</div>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"I wear my 8M hoodie literally everywhere — practices, school, coffee runs. The quality is insane and I get compliments every single time. This brand actually gets lax girls."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar" style="background:#6d28d9;">S</div>
+            <div>
+              <div class="reviewer-name">Sophia K.</div>
+              <div class="reviewer-location">Midfielder · Virginia</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Ordered the Mafia Crewneck for the whole team as a gift from our seniors. Everyone was OBSESSED. Fit is perfect, material is so soft. Already planning our next order."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar" style="background:#ec4899;">M</div>
+            <div>
+              <div class="reviewer-name">Madison L.</div>
+              <div class="reviewer-location">Team Captain · Maryland</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Finally a brand that's made for us. The Arc Biker Shorts are my go-to for practice and games. Super comfortable, don't ride up, and look amazing. I've bought 4 pairs."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar" style="background:#f59e0b;">A</div>
+            <div>
+              <div class="reviewer-name">Avery T.</div>
+              <div class="reviewer-location">Attacker · New York</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"My daughter is a goalie and absolutely obsessed with 8 Meter Mafia. She's been rocking the gear all season and her whole team ended up ordering. Ships fast, looks even better in person."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar" style="background:#0369a1;">J</div>
+            <div>
+              <div class="reviewer-name">Jennifer R.</div>
+              <div class="reviewer-location">Lax Mom · Connecticut</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Love that this brand is built specifically for women's lacrosse. The 8M Classic Tee is my favorite — great cut, soft fabric, washes perfectly. Rep the Mafia every day."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar" style="background:#7c3aed;">C</div>
+            <div>
+              <div class="reviewer-name">Claire B.</div>
+              <div class="reviewer-location">Defender · Pennsylvania</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"This gear is legitimately different from everything else out there. Bold, feminine, athletic. The stick bag backpack has so much room and looks way cooler than anything at the sports store."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar" style="background:#db2777;">R</div>
+            <div>
+              <div class="reviewer-name">Riley H.</div>
+              <div class="reviewer-location">Attack · Massachusetts</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL GRID -->
+  <section class="social-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">@8MeterMafia</span>
+        <h2 class="section-title">Join the Mafia</h2>
+        <p class="section-sub">Tag us in your fits and join thousands of lax girls repping the brand.</p>
+      </div>
+      <div class="social-grid">
+        <div class="social-tile"><div class="social-tile-ph" style="background:linear-gradient(135deg,#4c1d95,#6d28d9)">🏒</div><div class="social-overlay">📷</div></div>
+        <div class="social-tile"><div class="social-tile-ph" style="background:linear-gradient(135deg,#831843,#ec4899)">🌸</div><div class="social-overlay">📷</div></div>
+        <div class="social-tile"><div class="social-tile-ph" style="background:linear-gradient(135deg,#1e1b4b,#4c1d95)">⚡</div><div class="social-overlay">📷</div></div>
+        <div class="social-tile"><div class="social-tile-ph" style="background:linear-gradient(135deg,#0f0f1a,#6d28d9)">🎽</div><div class="social-overlay">📷</div></div>
+        <div class="social-tile"><div class="social-tile-ph" style="background:linear-gradient(135deg,#78350f,#d97706)">🏆</div><div class="social-overlay">📷</div></div>
+      </div>
+      <div style="text-align:center;margin-top:32px;">
+        <a href="https://instagram.com/8metermafia" target="_blank" rel="noopener" class="btn btn-dark">Follow @8MeterMafia</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMAIL SIGNUP -->
+  <section class="email-signup">
+    <div class="container">
+      <div class="signup-content">
+        <h2 class="signup-title">Join the Mafia. Get 15% Off.</h2>
+        <p class="signup-sub">New drops, exclusive deals, and Mafia-only access. Drop your email to get in.</p>
+        <form class="signup-form" id="signupForm">
+          <input type="email" placeholder="your@email.com" required />
+          <button type="submit" class="btn btn-primary">Join Now</button>
+        </form>
+        <p class="signup-fine">By subscribing you agree to receive marketing emails from 8 Meter Mafia. You can unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="index.html" style="font-family:'Oswald',sans-serif;font-size:1.4rem;font-weight:700;color:#fff;letter-spacing:.06em;text-transform:uppercase;">
+            8 Meter <span style="color:#ec4899;">Mafia</span>
+          </a>
+          <p>The premier lifestyle brand for girls and women who live, breathe, and compete in lacrosse. Own the arc. Rule the game.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/8metermafia" target="_blank" rel="noopener" class="social-btn" title="Instagram">📷</a>
+            <a href="https://tiktok.com/@8metermafia" target="_blank" rel="noopener" class="social-btn" title="TikTok">🎵</a>
+            <a href="https://twitter.com/8metermafia" target="_blank" rel="noopener" class="social-btn" title="X / Twitter">𝕏</a>
+            <a href="#" class="social-btn" title="Facebook">f</a>
+          </div>
+        </div>
+
+        <!-- Shop -->
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html#new">New Arrivals</a></li>
+            <li><a href="shop.html#tops">Tops &amp; Tanks</a></li>
+            <li><a href="shop.html#hoodies">Hoodies &amp; Crews</a></li>
+            <li><a href="shop.html#bottoms">Shorts &amp; Joggers</a></li>
+            <li><a href="shop.html#hats">Headwear</a></li>
+            <li><a href="shop.html#accessories">Accessories</a></li>
+            <li><a href="shop.html#gear">Gear Bags</a></li>
+            <li><a href="shop.html#sale">Sale</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#community">Community</a></li>
+            <li><a href="about.html#team">Our Team</a></li>
+            <li><a href="#">Ambassadors</a></li>
+            <li><a href="#">Team Orders</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Help -->
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns &amp; Exchanges</a></li>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Track Your Order</a></li>
+            <li><a href="#">Gift Cards</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 8 Meter Mafia LLC. All rights reserved.</span>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

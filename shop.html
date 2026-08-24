@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop | 8 Meter Mafia</title>
+  <meta name="description" content="Shop all 8 Meter Mafia apparel — tees, hoodies, shorts, hats and gear for girls and women who play lacrosse." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Shop-specific styles */
+    .shop-hero {
+      background: var(--navy);
+      padding: 60px 0 48px;
+      text-align: center;
+      border-bottom: 2px solid var(--purple);
+    }
+    .shop-hero h1 { color: var(--white); font-size: clamp(2rem,5vw,3.5rem); }
+    .shop-hero p  { color: var(--gray-300); margin-top: 10px; }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--pink); }
+    .breadcrumb span { color: var(--gray-500); }
+
+    .shop-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 40px;
+      padding: 48px 0 80px;
+      align-items: start;
+    }
+    .shop-sidebar {
+      position: sticky;
+      top: 90px;
+    }
+    .filter-group {
+      margin-bottom: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .filter-group:last-child { border-bottom: none; }
+    .filter-title {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--dark);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    .filter-options { display: flex; flex-direction: column; gap: 10px; }
+    .filter-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: var(--gray-700);
+    }
+    .filter-option input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--purple);
+    }
+    .filter-option:hover { color: var(--purple); }
+    .filter-color-dots { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+    .filter-dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-dot:hover, .filter-dot.active { border-color: var(--purple); transform: scale(1.15); }
+
+    .shop-main {}
+    .shop-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .results-count { font-size: 0.9rem; color: var(--gray-500); }
+    .sort-select {
+      padding: 10px 16px;
+      border: 1px solid var(--gray-300);
+      border-radius: 8px;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--dark);
+      background: white;
+      outline: none;
+      cursor: pointer;
+    }
+    .sort-select:focus { border-color: var(--purple); }
+
+    .filter-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .filter-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: var(--purple);
+      color: white;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .filter-tag button { background: none; color: white; font-size: 0.9rem; line-height: 1; }
+
+    @media (max-width: 900px) {
+      .shop-layout { grid-template-columns: 1fr; }
+      .shop-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    🏒 FREE SHIPPING on orders $75+ &nbsp;|&nbsp; Use code <strong>MAFIA15</strong> for 15% off your first order &nbsp;|&nbsp; <a href="shop.html">Shop Now →</a>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-inner">
+        <div class="nav-logo">
+          <a href="index.html">
+            8<span> Meter</span> Mafia
+            <span class="logo-badge">Women's Lax</span>
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="shop.html" class="active">Shop</a>
+            <div class="dropdown">
+              <a href="#tops">Tops &amp; Tanks</a>
+              <a href="#bottoms">Shorts &amp; Joggers</a>
+              <a href="#hoodies">Hoodies &amp; Crews</a>
+              <a href="#hats">Headwear</a>
+              <a href="#accessories">Accessories</a>
+              <a href="#gear">Gear Bags</a>
+            </div>
+          </li>
+          <li>
+            <a href="#collections">Collections</a>
+            <div class="dropdown">
+              <a href="#new">New Arrivals</a>
+              <a href="#gameday">Game Day</a>
+              <a href="#practice">Practice Ready</a>
+              <a href="#campus">Campus Life</a>
+              <a href="#sale">Sale</a>
+            </div>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#community">Community</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button aria-label="Search">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+          <a href="#" aria-label="Account">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </a>
+          <button data-cart-open aria-label="Cart">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span class="cart-count">0</span>
+          </button>
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
+    <div class="mobile-nav-drawer">
+      <div class="mobile-nav-header">
+        <a href="index.html" style="font-family:'Oswald',sans-serif;font-size:1.2rem;color:#fff;letter-spacing:.06em;text-transform:uppercase;">8 Meter Mafia</a>
+        <button class="mobile-nav-close" id="mobileClose">✕</button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="shop.html">Shop All</a>
+        <a href="#tops">Tops &amp; Tanks</a>
+        <a href="#bottoms">Shorts &amp; Joggers</a>
+        <a href="#hoodies">Hoodies &amp; Crews</a>
+        <a href="#hats">Headwear</a>
+        <a href="#accessories">Accessories</a>
+        <a href="#new">New Arrivals</a>
+        <a href="#sale">Sale</a>
+        <a href="about.html">About Us</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- CART DRAWER -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-backdrop" id="cartBackdrop"></div>
+    <div class="cart-panel">
+      <div class="cart-header">
+        <h3>Your Cart (0)</h3>
+        <button class="cart-close" id="cartClose">✕</button>
+      </div>
+      <div class="cart-body">
+        <div class="cart-empty">
+          <div class="cart-empty-icon">🥍</div>
+          <p>Your cart is empty.<br>Time to gear up!</p>
+          <a href="shop.html" class="btn btn-primary">Shop Now</a>
+        </div>
+      </div>
+      <div class="cart-footer">
+        <div style="display:flex;justify-content:space-between;font-weight:700;margin-bottom:16px;font-size:1.1rem;"><span>Subtotal</span><span>$0.00</span></div>
+        <a href="#" class="btn btn-dark">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHOP HERO -->
+  <section class="shop-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Shop All</span>
+      </div>
+      <h1 class="section-title" style="color:white;font-size:clamp(2rem,5vw,3rem);">All Products</h1>
+      <p style="color:#9ca3af;margin-top:10px;">Gear up. Rep the Mafia.</p>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS ROW -->
+  <div style="background:var(--off-white);border-bottom:1px solid var(--gray-100);padding:16px 0;" id="collections">
+    <div class="container">
+      <div style="display:flex;gap:12px;overflow-x:auto;padding-bottom:4px;">
+        <a href="#new"        style="white-space:nowrap;padding:8px 20px;border-radius:100px;background:var(--navy);color:white;font-family:'Oswald',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:.2s;">New Arrivals</a>
+        <a href="#tops"       style="white-space:nowrap;padding:8px 20px;border-radius:100px;border:1px solid var(--gray-300);color:var(--gray-700);font-family:'Oswald',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:.2s;">Tops &amp; Tanks</a>
+        <a href="#hoodies"    style="white-space:nowrap;padding:8px 20px;border-radius:100px;border:1px solid var(--gray-300);color:var(--gray-700);font-family:'Oswald',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:.2s;">Hoodies</a>
+        <a href="#bottoms"    style="white-space:nowrap;padding:8px 20px;border-radius:100px;border:1px solid var(--gray-300);color:var(--gray-700);font-family:'Oswald',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:.2s;">Bottoms</a>
+        <a href="#hats"       style="white-space:nowrap;padding:8px 20px;border-radius:100px;border:1px solid var(--gray-300);color:var(--gray-700);font-family:'Oswald',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:.2s;">Hats</a>
+        <a href="#accessories"style="white-space:nowrap;padding:8px 20px;border-radius:100px;border:1px solid var(--gray-300);color:var(--gray-700);font-family:'Oswald',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:.2s;">Accessories</a>
+        <a href="#gear"       style="white-space:nowrap;padding:8px 20px;border-radius:100px;border:1px solid var(--gray-300);color:var(--gray-700);font-family:'Oswald',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:.2s;">Gear Bags</a>
+        <a href="#sale"       style="white-space:nowrap;padding:8px 20px;border-radius:100px;background:#ef4444;color:white;font-family:'Oswald',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:.2s;">Sale 🔥</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHOP LAYOUT -->
+  <div class="container">
+    <div class="shop-layout">
+
+      <!-- SIDEBAR FILTERS -->
+      <aside class="shop-sidebar">
+
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;">
+          <span style="font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.9rem;">Filters</span>
+          <button style="font-size:.8rem;color:var(--pink);font-weight:600;">Clear All</button>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-title">Category <span>▾</span></div>
+          <div class="filter-options">
+            <label class="filter-option"><input type="checkbox" /> Tops &amp; Tanks</label>
+            <label class="filter-option"><input type="checkbox" /> Hoodies &amp; Crews</label>
+            <label class="filter-option"><input type="checkbox" /> Shorts &amp; Joggers</label>
+            <label class="filter-option"><input type="checkbox" /> Headwear</label>
+            <label class="filter-option"><input type="checkbox" /> Accessories</label>
+            <label class="filter-option"><input type="checkbox" /> Gear Bags</label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-title">Size <span>▾</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;">
+            <button style="padding:6px 14px;border:1px solid var(--gray-300);border-radius:6px;font-size:.85rem;cursor:pointer;">XS</button>
+            <button style="padding:6px 14px;border:1px solid var(--gray-300);border-radius:6px;font-size:.85rem;cursor:pointer;">S</button>
+            <button style="padding:6px 14px;border:1px solid var(--purple);border-radius:6px;font-size:.85rem;cursor:pointer;background:var(--purple);color:white;">M</button>
+            <button style="padding:6px 14px;border:1px solid var(--gray-300);border-radius:6px;font-size:.85rem;cursor:pointer;">L</button>
+            <button style="padding:6px 14px;border:1px solid var(--gray-300);border-radius:6px;font-size:.85rem;cursor:pointer;">XL</button>
+            <button style="padding:6px 14px;border:1px solid var(--gray-300);border-radius:6px;font-size:.85rem;cursor:pointer;">2XL</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-title">Color <span>▾</span></div>
+          <div class="filter-color-dots">
+            <div class="filter-dot" style="background:#0f0f1a;" title="Black"></div>
+            <div class="filter-dot" style="background:#6d28d9;" title="Purple"></div>
+            <div class="filter-dot active" style="background:#ec4899;" title="Pink"></div>
+            <div class="filter-dot" style="background:#f59e0b;" title="Gold"></div>
+            <div class="filter-dot" style="background:#1e3a5f;" title="Navy"></div>
+            <div class="filter-dot" style="background:#f3f4f6;border:1px solid #d1d5db;" title="White"></div>
+            <div class="filter-dot" style="background:#ef4444;" title="Red"></div>
+            <div class="filter-dot" style="background:#0369a1;" title="Blue"></div>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-title">Price <span>▾</span></div>
+          <div class="filter-options">
+            <label class="filter-option"><input type="checkbox" /> Under $30</label>
+            <label class="filter-option"><input type="checkbox" checked /> $30 – $50</label>
+            <label class="filter-option"><input type="checkbox" /> $50 – $75</label>
+            <label class="filter-option"><input type="checkbox" /> $75+</label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-title">Collection <span>▾</span></div>
+          <div class="filter-options">
+            <label class="filter-option"><input type="checkbox" /> New Arrivals</label>
+            <label class="filter-option"><input type="checkbox" /> Game Day</label>
+            <label class="filter-option"><input type="checkbox" /> Practice Ready</label>
+            <label class="filter-option"><input type="checkbox" /> Campus Life</label>
+            <label class="filter-option"><input type="checkbox" /> Sale Items</label>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- MAIN PRODUCT AREA -->
+      <main class="shop-main">
+
+        <div class="shop-toolbar">
+          <span class="results-count">Showing <strong>24</strong> products</span>
+          <select class="sort-select">
+            <option>Sort: Featured</option>
+            <option>Newest First</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Best Sellers</option>
+            <option>Top Rated</option>
+          </select>
+        </div>
+
+        <div class="filter-tags">
+          <div class="filter-tag">$30 – $50 <button>✕</button></div>
+          <div class="filter-tag">Pink <button>✕</button></div>
+        </div>
+
+        <!-- NEW ARRIVALS -->
+        <h3 id="new" style="font-family:'Oswald',sans-serif;font-size:1.4rem;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);margin:0 0 20px;padding-top:8px;">🔥 New Arrivals</h3>
+        <div class="products-grid" style="margin-bottom:48px;">
+          <div class="product-card"><div class="product-img-wrap"><div class="product-ph" style="background:linear-gradient(135deg,#4c1d95,#6d28d9)">👕</div><span class="badge badge-new">New</span><div class="product-quick">Quick Add</div></div><div class="product-info"><p class="product-name">Arc Lifestyle Tee</p><p class="product-type">Women's Tee</p><div class="product-footer"><span class="product-price">$34</span><div class="color-dots"><div class="dot" style="background:#6d28d9;"></div><div class="dot" style="background:#ec4899;"></div></div></div></div></div>
+          <div class="product-card"><div class="product-img-wrap"><div class="product-ph" style="background:linear-gradient(135deg,#831843,#ec4899)">🧥</div><span class="badge badge-new">New</span><div class="product-quick">Quick Add</div></div><div class="product-info"><p class="product-name">Fall '25 Crewneck</p><p class="product-type">Heavyweight Fleece</p><div class="product-footer"><span class="product-price">$62</span><div class="color-dots"><div class="dot" style="background:#831843;"></div><div class="dot" style="background:#0f0f1a;"></div></div></div></div></div>
+          <div class="product-card"><div class="product-img-wrap"><div class="product-ph" style="background:linear-gradient(135deg,#1e1b4b,#4c1d95)">🩳</div><span class="badge badge-new">New</span><div class="product-quick">Quick Add</div></div><div class="product-info"><p class="product-name">Campus Shorts</p><p class="product-type">Lifestyle Short</p><div class="product-footer"><span class="product-price">$46</span><div class="color-dots"><div class="dot" style="background:#1e1b4b;"></div><div class="dot" style="background:#6d28d9;"></div></div></div></div></div>
+          <div class="product-card"><div class="product-img-wrap"><div class="product-ph" style="background:linear-gradient(135deg,#0f0f1a,#374151)">🧢</div><span class="badge badge-new">New</span><div class="product-quick">Quick Add</div></div><div class="product-info"><p class="product-name">Mafia Trucker Hat</p><p class="product-type">Snapback Cap</p><div class="product-footer"><span class="product-price">$32</span><div class="color-dots"><div class="dot" style="background:#0f0f1a;"></div><div class="dot" style="background:#1e3a5f;"></div></div></div></div></div>
+        </div>
+
+        <!-- TOPS -->
+        <h3 id="tops" style="font-family:'Oswald',sans-serif;font-size:1.4rem;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);margin:0 0 20px;border-top:1px solid var(--gray-100);padding-top:32px;">Tops &amp; Tanks</h3>
+        <div class="products-grid" style="margin-bottom:48px;">
+          <div class="product-card"><div class="product-img-wrap"><div class="product-ph" style="background:linear-gradient(135deg,#4c1d95,#6d28d9)">👕</div><span class="badge badge-hot">Bestseller</span><div class="product-quick">Quick Add</div></div><div class="product-info"><p class="product-name">8M Classic Tee</p><p class="product-type">Lifestyle Top</p><div class="product-footer"><span class="product-price">$34</span><div class="color-dots"><div class="dot" style="background:#6d28d9;"></div><div class="dot" style="background:#0f0f1a;"></div><div class="dot" style="background:#ec4899;"></div></div></div></div></div>
+          <div class="product-card"><div class="product-img-wrap"><div class="product-ph" style="background:linear-gradient(135deg,#78350f,#d97706)">🎽</div><span class="badge badge-sale">Sale</span><div class="product-quick">Quick Add</div></div><div class="product-info"><p class="product-name">Game Day Tank</p><p class="product-type">Performance Tank</p><div class="product-footer"><span class="product-price"><span class="price-old">$36</span>$24</span><div class="color-dots"><div class="dot" style="background:#ec4899;"></div><div class="dot" style="background:#f59e0b;"></div></div></div></div></div>
+          <div class="product-card"><div class="product-img-wrap"><div class="product-ph" style="background:linear-gradient(135deg,#0c4a6e,#0369a1)">👚</div><div class="product-quick">Quick Add</div></div><div class="product-info"><p class="product-name">Mafia Muscle Tee</p><p class="product-type">Crop Top</p><div class="product-footer"><span class="product-price">$30</span><div class="color-dots"><div class="dot" style="background:#0369a1;"></div><div class="dot" style="background:#0f0f1a;"></div></div></div></div></div>
+          <div class="product-card"><div class="product-img-wrap"><div class="product-ph" style="background:linear-gradient(135deg,#14532d,#16a34a)">🌿</div><div class="product-quick">Quick Add</div></div><div class="product-info"><p class="product-name">Oversized Graphic Tee</p><p class="product-type">Unisex Fit</p><div class="product-footer"><span class="product-price">$36</span><div class="color-dots"><div class="dot" style="background:#14532d;"></div><div class="dot" style="background:#0f0f1a;"></div><div class="dot" style="background:#f3f4f6;border:1px solid #d1d5db;"></div></div></div></div></div>
+        </div>
+
+        <!-- HOODIES -->
+        <h3 id="hoodies" style="font-family:'Oswald',sans-serif;font-size:1.4rem;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);margin:0 0 20px;border-top:1px solid var(--gray-100);padding-top:32px;">Hoodies &amp; Crews</h3>
+        <div class="products-grid" style="margin-bottom:48px;">
+          <div class="product-card"><div class="product-img-wrap"><div class="product-ph" style="background:linear-gradient(135deg,#831843,#ec4899)">🧥</div><span class="badge badge-hot">Bestseller</span><div class="product-quick">Quick Add</div></div><div class="product-info"><p class="product-name">Mafia Pullover Hoodie</p><p class="product-type">Fleece Hoodie</p><div class="product-footer"><span class="product-price">$68</span><div class="color-dots"><div class="dot" style="background:#1e1b4b;"></div><div class="dot" style="background:#831843;"></div><div class="dot" style="background:#334155;"></div></div></div></div></div>
+          <div class="product-card"><div class="product-img-wrap"><div class="product-ph" style="background:linear-gradient(135deg,#4c1d95,#ec4899)">🧶</div><div class="product-quick">Quick Add</div></div><div class="product-info"><p class="product-name">Mafia Crewneck</p><p class="product-type">Heavyweight Crew</p><div class="product-footer"><span class="product-price">$58</span><div class="color-dots"><div class="dot" style="background:#6d28d9;"></div><div class="dot" style="background:#0f0f1a;"></div></div></div></div></div>
+          <div class="product-card"><div class="product-img-wrap"><div class="product-ph" style="background:linear-gradient(135deg,#0f0f1a,#1e1b4b)">🪄</div><span class="badge badge-new">New</span><div class="product-quick">Quick Add</div></div><div class="product-info"><p class="product-name">Zip-Up Hoodie</p><p class="product-type">Full Zip</p><div class="product-footer"><span class="product-price">$72</span><div class="color-dots"><div class="dot" style="background:#0f0f1a;"></div><div class="dot" style="background:#6d28d9;"></div></div></div></div></div>
+          <div class="product-card"><div class="product-img-wrap"><div class="product-ph" style="background:linear-gradient(135deg,#7f1d1d,#ef4444)">🔥</div><div class="product-quick">Quick Add</div></div><div class="product-info"><p class="product-name">Quarter Zip Pullover</p><p class="product-type">Performance Fleece</p><div class="product-footer"><span class="product-price">$64</span><div class="color-dots"><div class="dot" style="background:#7f1d1d;"></div><div class="dot" style="background:#1e3a5f;"></div></div></div></div></div>
+        </div>
+
+        <!-- SALE -->
+        <div id="sale" style="background:linear-gradient(135deg,#7f1d1d,#ef4444);border-radius:12px;padding:32px;text-align:center;margin-bottom:28px;">
+          <h3 style="font-family:'Oswald',sans-serif;font-size:2rem;letter-spacing:.08em;text-transform:uppercase;color:white;margin-bottom:8px;">🔥 Sale — Up to 40% Off</h3>
+          <p style="color:rgba(255,255,255,.85);">Limited time. While supplies last.</p>
+        </div>
+        <div class="products-grid">
+          <div class="product-card"><div class="product-img-wrap"><div class="product-ph" style="background:linear-gradient(135deg,#78350f,#d97706)">🎽</div><span class="badge badge-sale">40% Off</span><div class="product-quick">Quick Add</div></div><div class="product-info"><p class="product-name">Game Day Tank</p><p class="product-type">Performance Tank</p><div class="product-footer"><span class="product-price"><span class="price-old">$36</span>$22</span><div class="color-dots"><div class="dot" style="background:#ec4899;"></div><div class="dot" style="background:#f59e0b;"></div></div></div></div></div>
+          <div class="product-card"><div class="product-img-wrap"><div class="product-ph" style="background:linear-gradient(135deg,#4c1d95,#6d28d9)">👕</div><span class="badge badge-sale">30% Off</span><div class="product-quick">Quick Add</div></div><div class="product-info"><p class="product-name">8M Logo Tee (S/M only)</p><p class="product-type">Lifestyle Top</p><div class="product-footer"><span class="product-price"><span class="price-old">$34</span>$24</span><div class="color-dots"><div class="dot" style="background:#ec4899;"></div><div class="dot" style="background:#6d28d9;"></div></div></div></div></div>
+          <div class="product-card"><div class="product-img-wrap"><div class="product-ph" style="background:linear-gradient(135deg,#14532d,#16a34a)">🎒</div><span class="badge badge-sale">25% Off</span><div class="product-quick">Quick Add</div></div><div class="product-info"><p class="product-name">Drawstring Bag</p><p class="product-type">Backpack</p><div class="product-footer"><span class="product-price"><span class="price-old">$28</span>$21</span><div class="color-dots"><div class="dot" style="background:#0f0f1a;"></div></div></div></div></div>
+          <div class="product-card"><div class="product-img-wrap"><div class="product-ph" style="background:linear-gradient(135deg,#4c1d95,#ec4899)">🧦</div><span class="badge badge-sale">Buy 2 Get 1</span><div class="product-quick">Quick Add</div></div><div class="product-info"><p class="product-name">8M Crew Socks</p><p class="product-type">3-Pack</p><div class="product-footer"><span class="product-price">$22</span><div class="color-dots"><div class="dot" style="background:#ec4899;"></div><div class="dot" style="background:#6d28d9;"></div></div></div></div></div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" style="font-family:'Oswald',sans-serif;font-size:1.4rem;font-weight:700;color:#fff;letter-spacing:.06em;text-transform:uppercase;">8 Meter <span style="color:#ec4899;">Mafia</span></a>
+          <p>The premier lifestyle brand for girls and women who live, breathe, and compete in lacrosse. Own the arc. Rule the game.</p>
+          <div class="footer-social">
+            <a href="#" class="social-btn" title="Instagram">📷</a>
+            <a href="#" class="social-btn" title="TikTok">🎵</a>
+            <a href="#" class="social-btn" title="X">𝕏</a>
+            <a href="#" class="social-btn" title="Facebook">f</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#new">New Arrivals</a></li>
+            <li><a href="#tops">Tops &amp; Tanks</a></li>
+            <li><a href="#hoodies">Hoodies &amp; Crews</a></li>
+            <li><a href="#sale">Sale</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Ambassadors</a></li>
+            <li><a href="#">Team Orders</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 8 Meter Mafia LLC. All rights reserved.</span>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
